@@ -71,3 +71,48 @@ Difference between **Algorithm and Data Structure**
 
 Data Structure → Organizes and stores data  
 Algorithm → Step-by-step process to solve a problem
+
+# DAY 2 — Time Complexity & Big O
+
+## Learn These Concepts
+
+### Why Complexity Matters
+* **Example:** Imagine searching for a specific item in a list of 1,000,000 items. Which algorithm gets you the result faster, and how does the time taken scale as the list grows? 
+
+---
+
+### Big O Notation
+
+
+[Image of Big O time complexity chart]
+
+
+**Learn ONLY these:**
+* `O(1)` — *Constant Time*
+* `O(log n)` — *Logarithmic Time*
+* `O(n)` — *Linear Time*
+* `O(n log n)` — *Linearithmic Time*
+* `O(n²)` — *Quadratic Time*
+
+> **Goal:** Understand exactly what each of these time complexities means conceptually and how they affect performance.
+
+**🚫 Do NOT study:**
+* Master Theorem
+* Advanced mathematical analysis
+
+---
+
+## C# Practice
+
+**Task:** Write various functions and determine their Big O time complexity. 
+
+**Example:**
+```csharp
+void PrintNumbers(int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        Console.WriteLine(i);
+    }
+}
+// Time Complexity: O(n)
