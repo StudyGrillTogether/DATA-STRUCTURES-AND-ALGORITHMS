@@ -60,6 +60,22 @@ namespace DAY_3_PRACITCE
             }
             return newArray;
         }
+
+        static int[] Delete(int[] array,int position)
+        {
+            
+            int[] newArray=new int[array.Length-1];
+            for (int i = 0; i < position; i++)
+            {
+                newArray[i] = array[i];
+            }
+            
+            for (int i = position; i < newArray.Length; i++)
+            {
+                newArray[i] = array[i + 1];
+            }
+            return newArray;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("enter the number of elemennts in your array");
@@ -83,6 +99,12 @@ namespace DAY_3_PRACITCE
                 Console.Write(i+" ");
             }
 
+            int[] array2 = Delete(array1, 2);
+            Console.WriteLine();
+            foreach (int i in array2)
+            {
+                Console.Write(i + " ");
+            }
             Console.WriteLine("\nUSING bINARY sEARCH");
             Array.Sort(MyArray);
             Console.WriteLine(BinarySearch(MyArray, findNumber)); 
