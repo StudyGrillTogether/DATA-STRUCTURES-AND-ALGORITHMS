@@ -102,8 +102,67 @@ namespace DAY_5_GIT_EXERCISE
             /// but while popping in each loop we store it in temp stack 
             /// after the popping and printing is done 
             /// we op form temp stack and push it in the orignal stack 
+            /// 
+            
         }
-        
+        public static string ReverseString(string input)
+        {
+            Stack<char> stack = new Stack<char>();
+            foreach (char c in input)
+            {
+                stack.Push(c);
+            }
+            string reverse = "";
+            while (stack.Count != 0)
+            {
+                reverse += stack.Pop();
+            }
+            return reverse;
+        }
+
+        public static bool IsBalanced(string input)
+        {
+            Stack<char> stack=new Stack<char>();
+            foreach(char c in input)
+            {
+
+                if (c == '(' || c == '{' || c == '[')
+                {
+                    stack.Push(c);
+                }
+                else if (c == ')' || c == '}' || c == ']')
+                {
+                    if (stack.Count == 0)
+                    {
+                        return false;
+                    }
+                    char cin=stack.Pop();
+                    if (!( (cin == '(' && c == ')') ||
+                        (cin == '{' && c == '}') ||
+                        (cin == '[' && c == ']')))
+                    {
+                        return false;
+                    }
+
+                }
+            }
+            return stack.Count==0;
+        }
+        /// <summary>
+        /// so we take an input inside the method itself ofc and the method is bool so we return true or false
+        /// inside method we take a local stack 
+        /// then using if we check the conditions of open paranthesis if they are open paranthesis
+        /// then we push it inside the stack
+        /// now after pushing uing else if condition for close paranthesis we apply the pop function of stack
+        /// if close paranthesesis we apply pop function
+        /// if the popped opening bracket does not match the current closing bracket — for example ( should match ) — we return false immediately"
+        /// like for ex (==) then we return false we do this for every paranthesis until stack is empty or we get false 
+        /// as return 
+        /// then at last we check if stack is empty if it is then it returns true and we check if 
+        /// the paranthesis are balanced
+        /// and before popping we also check if the stack is empty ort not 
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             MyStack stack = new MyStack(5);
@@ -112,7 +171,9 @@ namespace DAY_5_GIT_EXERCISE
             Console.WriteLine("3.peek in the stack");
             Console.WriteLine("4.check of the stack is empty or not");
             Console.WriteLine("5.display stack");
-            Console.WriteLine("6.Exit");
+            Console.WriteLine("6.Reverse a string");
+            Console.WriteLine("7. check if balanced paranthesis");
+            Console.WriteLine("8.Exit");
             bool run = true;
             while (run)
             {
@@ -140,8 +201,17 @@ namespace DAY_5_GIT_EXERCISE
                         break;
                         
                     case "6":
-                        run = false;
+                        Console.WriteLine("Enter a string to reverse:");
+                        string input= Console.ReadLine();
+                        Console.WriteLine(ReverseString(input));
                         break;
+                    case "7":
+                        Console.WriteLine("enter the paranthesis to check if balanced");
+                        string paranthesis=Console.ReadLine();
+                        Console.WriteLine($"the paranthesis is balanced:{IsBalanced(paranthesis)}");
+                        break;
+                    case "8":
+                        run = false; break;
                     default:
                         Console.WriteLine("Invalid input!");
                         break;
