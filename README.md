@@ -317,3 +317,40 @@ O(log n)
 Implement:
 - LinearSearch()
 - BinarySearch()
+
+# DAY 9 — Basic Sorting
+
+## Learn these 3:
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+
+## Bubble Sort
+**Concept:**
+Compare adjacent elements and swap if they are in wrong order. Repeat until sorted.
+
+**Time Complexity:**
+- Best: O(n)
+- Worst: O(n²)
+
+## Selection Sort
+**Concept:**
+Find the minimum element and place it at the correct position.
+
+**Time Complexity:**
+- Best: O(n²)
+- Worst: O(n²)
+
+## Insertion Sort
+**Concept:**
+Pick each element and insert it into its correct position in the already sorted part.
+
+**Time Complexity:**
+- Best: O(n)
+- Worst: O(n²)
+
+## C# Practice
+Implement:
+- BubbleSort()
+- SelectionSort()
+- InsertionSort()
