@@ -354,3 +354,43 @@ Implement:
 - BubbleSort()
 - SelectionSort()
 - InsertionSort()
+
+# DAY 10 — Efficient Sorting
+
+## Learn:
+- Merge Sort
+- Quick Sort
+
+## Understand:
+- Divide and Conquer
+
+## Divide and Conquer
+**Concept:**
+Split the problem into smaller subproblems, solve each, then combine results.
+
+- **Divide** → Split problem into smaller parts
+- **Conquer** → Solve each small part
+- **Combine** → Merge results together
+
+## Merge Sort
+**Concept:**
+Split array in half recursively until single elements, then merge back in sorted order.
+
+**Time Complexity:**
+- Best: O(n log n)
+- Worst: O(n log n)
+
+## Quick Sort
+**Concept:**
+Pick a pivot element, place it in correct position, recursively sort left and right sides.
+
+**Time Complexity:**
+- Best: O(n log n)
+- Worst: O(n²)
+
+## C# Practice
+Implement:
+- MergeSort()
+- Merge()
+- QuickSort()
+- Partition()
