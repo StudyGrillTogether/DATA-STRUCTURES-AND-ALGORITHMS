@@ -394,3 +394,37 @@ Implement:
 - Merge()
 - QuickSort()
 - Partition()
+
+# DAY 11 — Trees
+
+## Learn:
+- Tree Terminology
+- Binary Tree
+- Tree Traversals
+
+## Tree Terminology
+- **Root** → top node, has no parent
+- **Parent** → node that has children
+- **Child** → node that has a parent
+- **Leaf** → node with no children
+- **Height** → longest path from root to leaf
+
+## Binary Tree
+**Concept:**
+A tree where each node has at most 2 children — left and right (0, 1, or 2).
+
+## Tree Traversals
+
+**Inorder** → Left → Root → Right
+
+**Preorder** → Root → Left → Right
+
+**Postorder** → Left → Right → Root
+
+## C# Practice
+Implement:
+- Node class
+- BinaryTree class
+- InOrder()
+- PreOrder()
+- PostOrder()
